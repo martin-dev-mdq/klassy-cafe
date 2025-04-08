@@ -1,0 +1,615 @@
+
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* fonts */
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+
+
+
+/* estilos generales */
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background-color: #fff;
+    font-size: 16px;
+
+}
+
+
+/* estilos del header */
+
+header {
+    background: #fff;
+    color: #2a2a2a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin:  0 100px 0 100px;
+        
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: #2a2a2a;
+}
+
+header nav ul li a:hover{
+    color: #fb5849;
+    text-decoration: underline;
+}
+
+header nav ul li a:active {
+    color: #fb5849;
+}
+
+
+
+/* estilos del main */
+
+main {
+    display: flex; 
+    height: 100vh;
+
+}
+
+/* estilos del main home.html */
+
+.main-left {
+    background-image: url("../images/top-left-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    gap: 50px;
+   
+    
+}
+
+
+.btn-reserva a{
+    background-color: #fff;
+    color: #fb5849;
+    font-family: 13px;
+    font-weight: 600;
+    padding: 12px 25px;
+    text-decoration: none;
+    
+}
+
+.main-right  {
+    width: 100%;
+   
+    
+}
+
+.main-right img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+   
+}
+
+/* estilos del main menu.html */
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    flex-direction: column;
+   
+    
+}
+
+.menu-up {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 35vh;
+    padding-left: 20px;
+    justify-content: center;
+    background-color: #FFFAFA;
+
+   
+    
+}
+
+main .main-menu .menu-up h1 {
+    font-size: 2rem;
+    color: #fb5849;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 20px;
+    
+}
+
+
+.menu-down {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start ;
+    overflow-x: scroll;
+    width: 95vw; 
+    gap: 20px;
+   
+
+    
+    
+}
+
+/* estilos staff.html */
+
+.main-staff {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFAFA;
+    
+}
+
+.main-staff h1 {
+    font-size: 2rem;
+    color: #fb5849;
+    font-family: 'Dancing Script', cursive;
+    margin-left: 20px;
+    margin-top: 20px;
+    
+}
+
+.main-staff p {
+    font-size: 1.2rem;
+    color: #2a2a2a;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.staff-down {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70vh;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+/* Estilos para contacto.html */
+
+header {
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 0;
+    padding: 10px 20px; 
+}
+
+header nav {
+    width: auto; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+header nav .navbar-toggler {
+    margin-right: 0; 
+    align-self: center; 
+}
+
+header nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start; 
+}
+
+header nav ul li a {
+    font-size: 1rem;
+}
+.main-contacto {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/reservation-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+.contacto-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    color: #fff;
+    padding: 20px;
+}
+
+.contacto-left h1 {
+    font-size: 2.5rem;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 10px;
+}
+
+.contacto-left p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.contacto-rigth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 95vh;
+    background-color: #FFFAFA;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    font-size: 1rem;
+    color: #2a2a2a;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form textarea {
+    resize: none;
+}
+
+form .btn-reserva {
+    background-color: #fb5849;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form .btn-reserva:hover {
+    background-color: #d94a3e;
+}
+
+/* Estilos para la página Nosotros */
+
+.main-nosotros {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px;
+    background-color: #FFFAFA;
+}
+
+.nosotros-left {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.nosotros-left h1 {
+    font-size: 2.5rem;
+    font-family: 'Dancing Script', cursive;
+    color: #fb5849;
+    margin-bottom: 20px;
+}
+
+.nosotros-left p {
+    font-size: 1.2rem;
+    color: #2a2a2a;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.nosotros-right {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.nosotros-right img {
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.nosotros-right img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para el enlace activo en el menú */
+
+.navbar-nav .nav-link.active {
+    color: #fb5849;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* estilos del footer */
+
+.footer-bg {
+    background: #2a2a2a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    height: 30vh;
+  
+
+}
+
+/* Media query para pantallas de dispositivos móviles */
+
+@media (max-width: 768px) {
+    /* Ajustes generales */
+    html, body {
+        font-size: 14px;
+    }
+
+    header {
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+        margin: 0;
+        padding: 10px 20px; 
+    }
+
+    header a img {
+        max-width: 120px; 
+        height: auto;
+    }
+
+    header nav {
+        width: auto; 
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header nav .navbar-toggler {
+        margin-right: 0; 
+        align-self: center; 
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start; 
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+    }
+    /* Ajustes específicos para index.html */
+    main {
+        flex-direction: column; 
+        align-items: center;
+        height: auto; 
+    }
+
+    .main-left {
+        width: 100%; 
+        text-align: center;
+        padding: 20px;
+    }
+
+    .main-right {
+        width: 100%; 
+        margin-top: 20px; 
+    }
+
+    .main-right img, 
+    .carousel-inner img {
+        width: 100%; 
+        height: auto; 
+        object-fit: cover; 
+    }
+
+    /* Ajustes para el footer */
+
+    .footer-bg {
+        padding: 10px;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    /* Ajustes para el main de menu.html */
+    .main-menu {
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px;
+    }
+
+    .menu-up {
+        width: 100%; 
+        text-align: center;
+        padding: 10px;
+    }
+
+    .menu-down {
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px; 
+        overflow-x: hidden; 
+        width: 100%; 
+    }
+
+    .menu-down img {
+        width: 90%; 
+        height: auto; 
+        border-radius: 10px; 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para las imágenes */
+    }
+
+    /* Ajustes para el main de nosotros.html */
+
+    .main-nosotros {
+        flex-direction: column; 
+        align-items: center;
+        padding: 20px;
+        height: auto; 
+    }
+
+    .nosotros-left {
+        width: 100%; 
+        text-align: center;
+        padding: 10px;
+    }
+
+    .nosotros-right {
+        width: 100%; 
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px; 
+    }
+
+    .nosotros-right img {
+        width: 90%; 
+        height: auto; 
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    }
+
+
+
+    /* Ajustes para el main de nosotros.html */
+    .main-nosotros {
+        flex-direction: column; 
+        align-items: center;
+        padding: 20px;
+        height: auto; 
+    }
+
+    .nosotros-left {
+        width: 100%; 
+        text-align: center;
+        padding: 10px;
+    }
+
+    .nosotros-right {
+        width: 100%; 
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px; 
+        margin-top: 20px; 
+    }
+
+    .nosotros-right img {
+        width: 90%; 
+        height: auto; 
+        border-radius: 10px; 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Ajustes para el main de staff.html */
+    .main-staff {
+        flex-direction: column; 
+        align-items: center;
+        padding: 20px;
+        height: auto 
+    }
+
+    .staff-down {
+        display: flex;
+        flex-direction: column;
+        align-items: c;enter;
+        gap: 20px; 
+        width: 100%; 
+    }
+
+    .staff-down img {
+        width: 90%; 
+        height: auto;
+        border-radius: 10px; 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para las imágenes */
+    }
+
+    /* Ajustes para el footer */
+    .footer-bg {
+        padding: 10px;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    /* Ajustes para el main de contacto.html */
+
+    .main-contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 20px; 
+    }
+
+    .contacto-left {
+        order: 1; /* Muestra primero contacto-left */
+        width: 100%; 
+        text-align: center;
+        padding: 10px;
+    }
+
+    .contacto-rigth {
+        order: 2; /* Muestra después contacto-rigth */
+        width: 100%; 
+        padding: 10px;
+    }
+
+    .footer-bg {
+        order: 3; /* Muestra el footer al final */
+        padding: 10px;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}
+
+
