@@ -1,0 +1,53 @@
+.main-nosotros {
+    @include flex-center(row, space-between, center);
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px;
+    background-color: $background-color;
+}
+
+.nosotros-left {
+    width: 50%;
+    height:100%;
+    padding-right: 20px;
+
+    h1 {
+        font-size: 2.5rem;
+        font-family: $font-secondary;
+        color: $primary-color;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: text-color;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+}
+
+
+.nosotros-right {
+    @include flex-center(column, center, flex-start);
+    width: 40%;
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+    overflow: hidden; /* Evita que el contenido desborde el contenedor */
+
+    video {
+        display: flex;
+        width: 100%; /* Ajusta el ancho al 100% del contenedor */
+        height: 100%; /* Ajusta la altura al 100% del contenedor */
+        object-fit: cover; /* Asegura que el video se recorte para llenar el contenedor */
+    }
+
+}
+
+
+/* Estilo para el enlace activo en el menú */
+
+.navbar-nav .nav-link.active {
+    color: primary-color;
+    font-weight: bold;
+    text-decoration: underline;
+}

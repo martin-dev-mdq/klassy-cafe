@@ -1,4 +1,3 @@
-
 /* reset */
 
 *{
@@ -9,10 +8,19 @@
 
 /* fonts */
 
-@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('../fonts/DancingScript-Regular.ttf') format('truetype');
+    src: url('../fonts/DancingScript-Bold.ttf') format('truetype');
+    src: url('../fonts/DancingScript-Medium.ttf') format('truetype');
+    src: url('../fonts/DancingScript-SemiBold.ttf') format('truetype');
+    src: url('../fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
 
+    }
 
+h1, h3 {
+    font-family: 'Dancing Script', cursive;
+}
 
 
 /* estilos generales */
@@ -24,6 +32,8 @@ html, body {
     font-size: 16px;
 
 }
+
+
 
 
 /* estilos del header */
@@ -87,6 +97,24 @@ main {
     
 }
 
+/* Estilos para el main-left en index.html */
+.main-left h1 {
+    font-size: 4rem; 
+    font-family: 'Dancing Script', cursive; 
+    color: #fff; 
+    text-align: center;
+    
+}
+
+
+.main-left p {
+    padding: 0 50px 0 50px;
+    font-size: 1.2rem;
+    color: #fff; 
+    text-align: center;
+   
+}
+
 
 .btn-reserva a{
     background-color: #fff;
@@ -141,7 +169,8 @@ main {
 }
 
 main .main-menu .menu-up h1 {
-    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: 600;
     color: #fb5849;
     font-family: 'Dancing Script', cursive;
     margin-bottom: 20px;
@@ -157,10 +186,66 @@ main .main-menu .menu-up h1 {
     width: 95vw; 
     gap: 20px;
    
-
-    
-    
 }
+
+/* Estilos para las imágenes del menú */
+.menu-down {
+    display: flex;
+    flex-wrap:nowrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu-item {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+
+
+.menu-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; 
+    background-color: #fb5849;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    transform: translateY(100%); /* Oculta el overlay inicialmente */
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover .menu-overlay {
+    transform: translateY(0); /* Muestra el overlay al pasar el mouse */
+}
+
+.menu-overlay h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.menu-overlay p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+
 
 /* estilos staff.html */
 
@@ -330,6 +415,7 @@ form .btn-reserva:hover {
 
 .nosotros-left {
     width: 50%;
+    height:100%;
     padding-right: 20px;
 }
 
@@ -347,23 +433,22 @@ form .btn-reserva:hover {
     line-height: 1.6;
 }
 
+
+
 .nosotros-right {
-    width: 50%;
+    width: 40%;
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    align-items: flex-start; /* Alinea el contenido al inicio del contenedor */
+    overflow: hidden; /* Evita que el contenido desborde el contenedor */
 }
 
-.nosotros-right img {
-    width: 45%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.nosotros-right img:hover {
-    transform: scale(1.05);
+.nosotros-right video {
+    display: flex;
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: 100%; /* Ajusta la altura al 100% del contenedor */
+    object-fit: cover; /* Asegura que el video se recorte para llenar el contenedor */
 }
 
 /* Estilo para el enlace activo en el menú */
@@ -465,12 +550,14 @@ form .btn-reserva:hover {
         flex-direction: column; 
         align-items: center;
         padding: 10px;
+        width: 100%; /* Ajusta el ancho al 100% */
     }
 
     .menu-up {
-        width: 100%; 
         text-align: center;
-        padding: 10px;
+        padding: 20px; /* Reduce el padding para ajustarse mejor */
+        width: 80%; /* Ajusta el ancho al 100% */
+        box-sizing: border-box; /* Asegura que el padding no exceda el ancho */
     }
 
     .menu-down {
@@ -478,13 +565,31 @@ form .btn-reserva:hover {
         align-items: center;
         gap: 20px; 
         overflow-x: hidden; 
-        width: 100%; 
+        width: 100%; /* Ajusta el ancho al 100% */
+        box-sizing: border-box; /* Asegura que el padding no exceda el ancho */
     }
 
     .menu-down img {
-        width: 90%; 
-        height: auto; 
-        border-radius: 10px; 
+        width: 95%; /* Ajusta el ancho al 95% para dejar un pequeño margen */
+        height: auto;  
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para las imágenes */
+    }
+
+    .menu-overlay h3 {
+        font-size: 1.8rem; /* Incrementa el tamaño del texto */
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .menu-overlay p {
+        font-size: 1.2rem; /* Incrementa el tamaño del texto */
+        margin: 0;
+    }
+
+    .menu-down img {
+        width: 100%; 
+        height: auto;  
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para las imágenes */
     }
 
@@ -554,15 +659,18 @@ form .btn-reserva:hover {
     /* Ajustes para el main de staff.html */
     .main-staff {
         flex-direction: column; 
+       
         align-items: center;
         padding: 20px;
         height: auto 
     }
 
     .staff-down {
+        height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: c;enter;
+        align-items: center;
+        flex-wrap: nowrap;
         gap: 20px; 
         width: 100%; 
     }
@@ -587,6 +695,7 @@ form .btn-reserva:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 100%;
         padding: 20px;
         gap: 20px; 
     }

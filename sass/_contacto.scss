@@ -1,0 +1,83 @@
+.main-contacto {
+  @include flex-center(row, center, center);
+  width: 100vw;
+  height: 100vh;
+  padding: 50px;
+  justify-content: center;
+  background-image: url("../images/reservation-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .contacto-left {
+    @include flex-center(column, center, flex-start);
+    width: 50%;
+    color: $background-color;
+    padding: 20px;
+    justify-content: center;
+  
+
+    h1 {
+      font-size: 3rem;
+      font-family: $font-secondary;
+      margin-bottom: 10px;
+      color: $primary-color;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  .contacto-rigth {
+    @include flex-center(column, center, center);
+    width: 40vw;
+    height: 95vh;
+    background-color: #FFFAFA;
+    padding: 30px;
+    
+    
+
+    form {
+      width: 100%;
+
+      label {
+        font-size: 1rem;
+        color: $text-color;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      .btn-reserva {
+        background-color: $primary-color;
+        color: $background-color;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: ($primary-color, 10%);
+        }
+      }
+    }
+  }
+}

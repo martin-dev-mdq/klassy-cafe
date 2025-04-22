@@ -1,0 +1,40 @@
+.main-staff {
+  @include flex-center(column, flex-start, center);
+  width: 100vw;
+  height: 100vh;
+  background-color: $background-color;
+
+  h1 {
+    font-size: 2rem;
+    font-family: $font-secondary;
+    color: $primary-color;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: $text-color;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .staff-down {
+    @include flex-center(row, flex-start, center);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 70vh;
+
+    img {
+      width: 25%;
+      height: auto;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
